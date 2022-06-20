@@ -1,9 +1,14 @@
 import React from "react";
-import Header from "./Components/Header/Header"
+import Header from "./Components/Header/NavBar";
+import ItemListContainer from "./Components/itemListContainer/index.js";
+
 
 const App = () => {
-  return (    
+  return (
+    <div>  
       <Header></Header>
+      <ItemListContainer greeting="Bienvenidos a Niko Store"></ItemListContainer>      
+    </div>  
     )
 }
 
