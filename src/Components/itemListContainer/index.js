@@ -1,9 +1,24 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import ItemList from "../itemList/ItemList";
+import { getData } from "../../mocks/fakeApi";
+
 
 const ItemListContainer = ({greeting}) => {
+    const [productList, serProductList]=useState([])
+    const [loading, setLoading]=useState(true)
+   
+
+    useEffect(()=>{
+        getData
+        .then((result)=> serProductList(result))
+        .catch((error)=> console.log(error))
+        .finally(()=> setLoading(false))
+    },[])
+
     return (
-        <div className="landing">
-            <span>{greeting}</span>
+        <div>
+            <h1>{greeting}</h1>
+            {loading ? <p>Cargando...</p> : <ItemList productList={productList}/>}            
         </div>
     )
 }
