@@ -4,13 +4,13 @@ import { getData } from "../../mocks/fakeApi";
 
 
 const ItemListContainer = ({greeting}) => {
-    const [productList, serProductList]=useState([])
+    const [productList, setProductList]=useState([])
     const [loading, setLoading]=useState(true)
    
 
     useEffect(()=>{
         getData
-        .then((result)=> serProductList(result))
+        .then((result)=> setProductList(result))
         .catch((error)=> console.log(error))
         .finally(()=> setLoading(false))
     },[])
