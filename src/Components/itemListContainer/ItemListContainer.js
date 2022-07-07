@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "../itemList/ItemList";
+import Loading from "../../assets/img/Loading.gif";
 import { getData } from "../../mocks/fakeApi";
 import { useParams } from "react-router-dom";
 
@@ -20,7 +21,7 @@ const ItemListContainer = ({ greeting }) => {
   return (
     <div>
       <h1>{greeting}</h1>
-      {loading ? <p>Cargando...</p> : <ItemList productList={productList} />}
+      {loading ? <img src={Loading} alt=""></img> : <ItemList productList={productList} />}
     </div>
   );
 };

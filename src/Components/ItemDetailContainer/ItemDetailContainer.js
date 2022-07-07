@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail.js";
+import Loading from "../../assets/img/Loading.gif";
 import { getProd } from "../../mocks/fakeApi";
 import { useParams } from "react-router-dom";
 
@@ -18,7 +19,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-      {loading ? <p>Cargando...</p> : <ItemDetail product={product} />}
+      {loading ? <img src={Loading} alt=""></img> : <ItemDetail product={product} />}
     </div>
   );
 };

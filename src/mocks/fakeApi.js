@@ -79,6 +79,6 @@ export const getProd = (id) => {
     );
     setTimeout(() => {
       resolve(pruductoEncontrato);
-    }, 1000);
+    }, 2000);
   });
 };
