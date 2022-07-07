@@ -1,25 +1,26 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail.js";
-import { getData } from "../../mocks/fakeApi";
-
+import { getProd } from "../../mocks/fakeApi";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-    const [productList, setProduct]=useState([])
-    const [loading, setLoading]=useState(true)
-   
+  const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(true);
 
-    useEffect(()=>{
-        getData
-        .then((result)=> setProduct(result))
-        .catch((error)=> console.log(error))
-        .finally(()=> setLoading(false))
-    },[])
+  const { id } = useParams();
 
-    return (
-        <div>
-            {loading ? <p>Cargando...</p> : <ItemDetail setProduct={productList}/>}            
-        </div>
-    )
-}
+  useEffect(() => {
+      getProd(id)
+      .then((result) => setProduct(result))
+      .catch((error) => console.log(error))
+      .finally(() => setLoading(false));
+  }, [id]);
 
-export default ItemDetailContainer
+  return (
+    <div>
+      {loading ? <p>Cargando...</p> : <ItemDetail product={product} />}
+    </div>
+  );
+};
+
+export default ItemDetailContainer;

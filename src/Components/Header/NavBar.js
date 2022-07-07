@@ -7,18 +7,23 @@ import {Link} from "react-router-dom"
 const MenuItems = [
     {
         id:1,
+        label:"Home",
+        route:"/"
+    },
+    {
+        id:2,
         label:"Marvel",
         route:"/category/Marvel"
     },
     {
-        id:2,
+        id:3,
         label:"DC",
         route:"/category/DC"
     },
     {
-        id:3,
+        id:4,
         label:"Star Wars",
-        route:"/category/Star Wars"
+        route:"/category/StarWars"
     },
 ]
 
@@ -28,7 +33,7 @@ const Header = () => {
             <Link to="/"><img src={logo} className="nav-logo" alt="Logo"></img></Link>            
             <nav className="nav-items">
                 {MenuItems.map((item)=> (
-                    <Link href="/" className="nav-item" key={item.id} to={item.route}>
+                    <Link className="nav-item" to={item.route} key={item.id}>
                         {item.label}
                     </Link>
                 ))}                           
