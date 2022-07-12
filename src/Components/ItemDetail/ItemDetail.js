@@ -21,7 +21,7 @@ const ItemDetail = ({ product }) => {
         <p className="card-text">$ {price}</p>
         <div>
           {acomprar === 0 && <ItemCount stock={stock} initial={1} onAdd={onAdd}/>}
-          {setAcomprar !== 0 && <Link to={'/cart'}>Terminar Compra</Link>} 
+          {setAcomprar !== 0 && <Link to={'/cart'}>Terminar Compra</Link>}           
         </div>
       </div>
     </div>
