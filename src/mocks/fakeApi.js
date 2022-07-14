@@ -6,7 +6,7 @@ export const product = [
     categoria: "Marvel",
     stock: 4,
     description: "asd",
-    price: "50.000",
+    price: 50000,
     img: "https://www.sideshow.com/storage/product-images/200561/spider-man-vs-venom_marvel_gallery_6160785dd4598.jpg",
   },
   {
@@ -16,7 +16,7 @@ export const product = [
     categoria: "DC",
     stock: 4,
     description: "asd",
-    price: "50.000",
+    price: 50000,
     img: "https://www.sideshow.com/storage/product-images/908580/batman-deluxe_dc-comics_gallery_60ba9827a4190.jpg",
   },
   {
@@ -26,7 +26,7 @@ export const product = [
     categoria: "StarWars",
     stock: 4,
     description: "asd",
-    price: "50.000",
+    price: 50000,
     img: "https://www.sideshow.com/storage/product-images/400103/darth-vader_star-wars_gallery_5d852f572aa5a.jpg",
   },
   {
@@ -36,7 +36,7 @@ export const product = [
     categoria: "Marvel",
     stock: 4,
     description: "asd",
-    price: "50.000",
+    price: 50000,
     img: "https://www.sideshow.com/storage/product-images/200571/hulk-vs-hulkbuster_marvel_gallery_621ecaa16bfb6.jpg",
   },
   {
@@ -46,7 +46,7 @@ export const product = [
     categoria: "DC",
     stock: 4,
     description: "asd",
-    price: "50.000",
+    price: 50000,
     img: "https://www.sideshow.com/storage/product-images/907931/clark-kent-deluxe_dc-comics_gallery_60467b227c01b.jpg",
   },
   {
@@ -56,7 +56,7 @@ export const product = [
     categoria: "StarWars",
     stock: 4,
     description: "asd",
-    price: "50.000",
+    price: 50000,
     img: "https://www.sideshow.com/storage/product-images/300732/anakin-skywalker-mythos_star-wars_gallery_624dc83b377af.jpg",
   },
 ];

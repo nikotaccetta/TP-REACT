@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import ItemCount from "../itemCount/itemCount";
 import { Link } from "react-router-dom";
+import { CartContext } from '../../context/cartContext';
 
 const ItemDetail = ({ product }) => {
   const { img, name, marca, description, price, stock } = product;
 
   const [acomprar, setAcomprar] = useState(0);
+  const { addToCart } = useContext(CartContext);
 
   const onAdd = ( amount ) => {
-    setAcomprar ( amount );
+    setAcomprar ( amount ); 
+    addToCart(product, amount);   
   };
 
   return (
@@ -20,8 +23,15 @@ const ItemDetail = ({ product }) => {
         <p className="card-text">{description}</p>
         <p className="card-text">$ {price}</p>
         <div>
-          {acomprar === 0 && <ItemCount stock={stock} initial={1} onAdd={onAdd}/>}
-          {setAcomprar !== 0 && <Link to={'/cart'}>Terminar Compra</Link>}           
+          {acomprar === 0 ? (
+                    <ItemCount
+                        stock={stock}
+                        initial={1}
+                        onAdd={onAdd}
+                    />
+                ) : (
+                    <Link to="/cart">Finalizar Compra</Link>
+                )}         
         </div>
       </div>
     </div>
