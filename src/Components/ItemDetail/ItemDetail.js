@@ -15,7 +15,12 @@ const ItemDetail = ({ product }) => {
   };
 
   return (
-    <div className="card">
+    <div style={{display: "flex",    
+    alignItems: "center",
+      border: '2px solid black',
+      margin: '10px',
+      padding: '10px',
+  }} className="card">
       <img src={img} width="400" height="400" alt={name} />
       <div className="card-body">
         <p className="card-text">{name}</p>
