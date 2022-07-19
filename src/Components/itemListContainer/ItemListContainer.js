@@ -13,7 +13,7 @@ const ItemListContainer = ({ greeting }) => {
 
   useEffect(() => {
     const productsCollection = collection(db, 'product');
-    const q = query(productsCollection, where('categoria', '==', 'categoryId'))
+    const q = query(productsCollection, where('categoria', '==', categoryId))
 
     getDocs(categoryId
       ? q
