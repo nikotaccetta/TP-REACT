@@ -1,10 +1,12 @@
+import { addDoc, serverTimestamp } from 'firebase/firestore';
 import React from 'react';
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import { CartContext } from '../../context/cartContext';
+
 
 const Cart = () => {
     const { cart, deleteItem, calcularTotal } = useContext(CartContext);
-    
+   
 
     if (cart.length === 0) {
         return <h2>El carrito esta vacio</h2>;

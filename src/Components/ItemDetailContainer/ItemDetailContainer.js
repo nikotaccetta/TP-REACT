@@ -4,7 +4,7 @@ import Loading from "../../assets/img/Loading.gif";
 //import { getProd } from "../../mocks/fakeApi";
 import { useParams } from "react-router-dom";
 import { db } from '../../firebase/firebase';
-import { doc, getDoc, collection } from "firebase/firestore";;
+import { doc, getDoc, collection } from "firebase/firestore";
 
 
 const ItemDetailContainer = () => {
